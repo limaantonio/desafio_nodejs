@@ -18,7 +18,7 @@ services:
     build: 
       context: ./node
     container_name: app-node
-    entrypoint: dockerize --wait tcp://database:3306 --timeout 20s docker-entrypoint.sh 
+    entrypoint: dockerize --wait tcp://database:3306 --timeout 20s docker-entrypoint.sh node index.js
     networks:
       - node-net
     volumes:
